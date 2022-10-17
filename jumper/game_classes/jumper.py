@@ -8,4 +8,5 @@ class Jumper:
 
     methods:
         -update: removes a piece of the parachute from the array and returns the new smaller array to the attrubute steve.
+        -get: returns the steve array
     """

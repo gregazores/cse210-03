@@ -32,7 +32,7 @@ class Game_loop:
             blanks.append("_")
         while (len(self.jumper.steve) > 0):
             self.output.getLetters(blanks)
-            self.output.getSteve()
+            self.output.getSteve(self.jumper)
             self.output.getGround()
             self.input.set()
             if self.input.get() in self.word.letters:

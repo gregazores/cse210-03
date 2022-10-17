@@ -1,3 +1,4 @@
+from game_classes.jumper import Jumper
 class Output:
     """
     responsibilty:
