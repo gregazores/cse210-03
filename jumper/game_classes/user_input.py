@@ -18,5 +18,13 @@ class Input:
         return self.player_input
     
     def set_input(self):
-        self.player_input = input('Guess a letter (a-z): ')
+        while True:
+            user_input = input('Guess a letter (a-z): ').lower()
+            if len(user_input) > 1:
+                print(f"One letter only Thank you!")
+            elif len(user_input) == 0:
+                print(f"Provide at least one letter Thank you!")
+            else:
+                self.player_input = user_input
+                break
         return self.player_input
