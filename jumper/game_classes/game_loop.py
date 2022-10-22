@@ -28,18 +28,23 @@ class Game_loop:
 
     def start_game(self):
         blanks = []
-        for i in self.word.letters:
+        the_wordArray = self.word.get_letters()
+        for i in the_wordArray:
             blanks.append("_")
         while (len(self.jumper.steve) > 0):
             self.output.getLetters(blanks)
             self.output.getSteve(self.jumper)
             self.output.getGround()
             self.input.set()
-            if self.input.get() in self.word.letters:
-                while self.input.get() in self.word.letters:
-                    x = self.word.letters.index(self.input.get())
+            if self.input.get() in the_wordArray:
+                #I discovered that using self.word.get_letters() directly will
+                #result in an infinite while loop since it will reset the array of letters
+                #in self.word.get_letters() instead of turning every instance of the letter to zero
+                #so I created a variable the_wordArray that we could use.
+                while self.input.get() in the_wordArray:
+                    x = the_wordArray.index(self.input.get())
                     blanks[x] = self.input.get()
-                    self.word.letters[x] = 0
+                    the_wordArray[x] = 0
             else:
                 self.jumper.update()
         print("Thanks for playing")
