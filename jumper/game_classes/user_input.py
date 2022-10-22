@@ -14,7 +14,7 @@ class Input:
         self.player_input = ''
     
     def get_input(self):
-        set_input(self.player_input)
+        # set_input(self.player_input)
         return self.player_input
     
     def set_input(self):

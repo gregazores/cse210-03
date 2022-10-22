@@ -1,4 +1,3 @@
-from game_classes.jumper import Jumper
 class Output:
     """
     responsibilty:
@@ -11,4 +10,15 @@ class Output:
         prints our the steve parachute array from jumper class
         -display ground (getGround) -- print the person figure and "^^^^^^^" under the jumper
     """
+    def __init__(self):
+        pass
+
+    def getLetters(self, blanks):
+        print(*blanks, sep=" ")
+
+    def getSteve(self, array, index):
+        pic = array[index]
+        print(pic)
+
+
     

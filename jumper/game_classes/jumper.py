@@ -13,52 +13,52 @@ class Jumper:
     def __init__(self):
 
 
-        self.index = 0
-        self.steve = self.parachute[self.index]
+        # self.index = 0
+        # self.steve = self.parachute[self.index]
         self.parachute = [
                     
 """
-            ___  
-           /___\ 
-           \   / 
-            \ /               
-             0   
-            /|\  
-            / \  
-          
-           ^^^^^^^""",
+   ___  
+  /___\ 
+  \   / 
+   \ /               
+    0   
+   /|\  
+   / \  
+
+^^^^^^^^^""",
 
 """                 
-           /___\ 
-           \   / 
-            \ /  
-             0   
-            /|\  
-            / \  
+ /___\ 
+ \   / 
+  \ /  
+   0   
+  /|\  
+  / \  
                     
-           ^^^^^^^""",
+^^^^^^^^^""",
                    
 """          
-           \   / 
-            \ /  
-             0   
-            /|\  
-            / \  
-          ^^^^^^^""",
+  \   / 
+   \ /  
+    0   
+   /|\  
+   / \  
+^^^^^^^^^""",
 
 """          
-            \ /  
-             0   
-            /|\  
-            / \  
-          ^^^^^^^""",
+   \ /  
+    0   
+   /|\  
+   / \  
+^^^^^^^^^""",
 
 """
-             x   
-            /|\  
-            / \  
+   x   
+  /|\  
+  / \  
           
-          ^^^^^^^"""]
+^^^^^^^"""]
 
     def update(self):
         if self.index <= self.parachute.length:
@@ -66,4 +66,4 @@ class Jumper:
             self.steve = self.parachute[self.index]
 
     def get(self):
-        return self.steve
+        return self.parachute
